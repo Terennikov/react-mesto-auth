@@ -40,43 +40,43 @@ const Register = props => {
 	}
 
 	return (
-		<section className='login-container'>
+		<>
 			<Header link='/sign-in' text='Вход' />
-			<div className='login'>
-				<h1 className='login__welcome'>Регистрация</h1>
-				<form className='login__form' onSubmit={handleSubmit}>
-					<input
-						placeholder='email'
-						className='login__input'
-						id='email'
-						required
-						name='email'
-						type='text'
-						value={formValue.email}
-						onChange={handleChange}
-					/>
-					<input
-						className='login__input'
-						placeholder='Пароль'
-						id='password'
-						required
-						name='password'
-						type='password'
-						value={formValue.password}
-						onChange={handleChange}
-					/>
-					<button type='submit' className='login__button'>
-						Зарегестрироваться
-					</button>
-					<div className="login__sign-in">
-						<Link to="/sign-in" className="login__link">
-							Уже зарегистрированы? Войти
-                		</Link>
-					</div>
-				</form>
-			</div>
+			<main className='login'>
+					<h1 className='login__welcome'>Регистрация</h1>
+					<form className='login__form' onSubmit={handleSubmit}>
+						<input
+							placeholder='email'
+							className='login__input'
+							id='email'
+							required
+							name='email'
+							type='text'
+							value={formValue.email}
+							onChange={handleChange}
+						/>
+						<input
+							className='login__input'
+							placeholder='Пароль'
+							id='password'
+							required
+							name='password'
+							type='password'
+							value={formValue.password}
+							onChange={handleChange}
+						/>
+						<button type='submit' className='login__button'>
+							Зарегестрироваться
+						</button>
+						<div className="login__sign-in">
+							<Link to="/sign-in" className="login__link">
+								Уже зарегистрированы? Войти
+							</Link>
+						</div>
+					</form>
+			</main>
 			<Footer />
-		</section>
+		</>
 	)
 }
 

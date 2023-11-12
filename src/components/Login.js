@@ -68,10 +68,9 @@ const Login = props => {
 
 	return (
 		<>
-		{ props.loggedIn ? <Navigate to='/' /> : null} 
-			<section className='login-container'>
+			{ props.loggedIn ? <Navigate to='/' /> : null} 
 				<Header link='/sign-up' text='Регистрация' />
-				<div className='login'>
+				<main className='login'>
 					<h1 className='login__welcome'>Вход</h1>
 					<form className='login__form' onSubmit={handleSubmit}>
 						<input
@@ -98,10 +97,9 @@ const Login = props => {
 							Войти
 						</button>
 					</form>
-				</div>
+				</main>
 				<Footer />
-			</section>
-		</>
+		</>	
 	)
 }
 export default Login
